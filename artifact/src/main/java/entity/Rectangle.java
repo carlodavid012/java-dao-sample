@@ -4,8 +4,8 @@ public class Rectangle extends Shape{
 
 	private ShapeType shapeType;
 	
-	public Rectangle() {
-		setShapeType(ShapeType.RECTANGLE);
+	public Rectangle(ShapeType shapeType) {
+		this.shapeType = shapeType;
 	}
 	
 	@Override
