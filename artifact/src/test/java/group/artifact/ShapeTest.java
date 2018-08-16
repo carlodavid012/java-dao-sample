@@ -19,14 +19,14 @@ public class ShapeTest {
 		
 		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("shapes.xml"));
 		
-		Square square = (Square)factory.getBean("square");
-		square.setLength(10);
-		square.setWidth(10);
-		String type = String.valueOf(square.getShapeType());
+		Triangle triangle = (Triangle)factory.getBean("triangle");
+		triangle.setLength(2);
+		triangle.setWidth(10);
+		String type = String.valueOf(triangle.getShapeType());
 			
 		
 		ShapeService s = (ShapeService)factory.getBean("shapeService");
-		s.computeArea(type, square.getLength(), square.getWidth());
+		s.computeArea(type, triangle.getLength(), triangle.getWidth());
 		
 	}
 	

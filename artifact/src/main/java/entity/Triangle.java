@@ -4,8 +4,8 @@ public class Triangle extends Shape{
 	
 	private ShapeType shapeType;
 	
-	public Triangle() {
-		setShapeType(ShapeType.TRIANGLE);
+	public Triangle(ShapeType shapeType) {
+		this.shapeType = shapeType;
 	}
 	
 	@Override
@@ -16,7 +16,7 @@ public class Triangle extends Shape{
 
 	@Override
 	public void setShapeType(ShapeType shapeType) {
-		this.shapeType = ShapeType.TRIANGLE;
+		this.shapeType = shapeType;
 		
 	}
 	

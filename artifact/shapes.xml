@@ -5,12 +5,18 @@
  		http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
  		
 	<bean id = "shapedb" class="dao.ShapeDB" />
+		
+	<bean id = "rectangle" class="entity.Rectangle">
+		<constructor-arg value = "RECTANGLE" />
+	</bean>
 	
-	<bean id = "rectangle" class="entity.Rectangle" />
+	<bean id = "square" class="entity.Square">
+		<constructor-arg value = "SQUARE" />
+	</bean>
 	
-	<bean id = "square" class="entity.Square" />
-	
-	<bean id = "triangle" class="entity.Triangle" />
+	<bean id = "triangle" class="entity.Triangle">
+		<constructor-arg value = "TRIANGLE" />
+	</bean>
 	
 	<bean id = "shape" class="entity.Shape" />
 	

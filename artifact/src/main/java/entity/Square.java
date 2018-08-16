@@ -4,8 +4,8 @@ public class Square extends Shape{
 	
 	private ShapeType shapeType;
 	
-	public Square () {
-		setShapeType(ShapeType.SQUARE);
+	public Square (ShapeType shapeType) {
+		this.shapeType = shapeType;
 	}
 
 	@Override
@@ -16,7 +16,7 @@ public class Square extends Shape{
 	@Override
 	public void setShapeType(ShapeType shapeType) {
 		
-		this.shapeType = ShapeType.SQUARE;
+		this.shapeType = shapeType;
 	}
 	
 	

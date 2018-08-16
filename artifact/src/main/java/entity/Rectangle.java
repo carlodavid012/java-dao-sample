@@ -8,15 +8,13 @@ public class Rectangle extends Shape{
 		this.shapeType = shapeType;
 	}
 	
-	@Override
 	public ShapeType getShapeType() {
 		
 		return this.shapeType;
 	}
 
-	@Override
 	public void setShapeType(ShapeType shapeType) {
-		this.shapeType = ShapeType.RECTANGLE;
+		this.shapeType = shapeType;
 		
 	}
 	
