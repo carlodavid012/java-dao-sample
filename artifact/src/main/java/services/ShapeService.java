@@ -1,26 +1,26 @@
 package services;
 
-import entity.ShapeType;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
 
 import dao.ShapeDB;
 import entity.MyShape;
-import entity.Shape;
 
 public class ShapeService implements MyShape{
 	
 
-	@Override
 	public void computeArea(String shapeType, int length, int width) {
 		
 		int area = length * width;
 		
-		ShapeDB shapeDB = new ShapeDB();
+		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("shapes.xml"));
+		ShapeDB shapedb = (ShapeDB)factory.getBean("shapedb");
 		
 		try {
-			shapeDB.insertData(length, width, shapeType, area);
+			shapedb.insertData(length, width, shapeType, area);
 		} catch (SQLException e) {
 			System.out.println(e);
 		}

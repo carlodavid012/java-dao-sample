@@ -11,9 +11,9 @@ public class ShapeTest {
 
 	@Test
 	public void test() throws SQLException {
-		Triangle shape = new Triangle();
-		shape.setLength(3);
-		shape.setWidth(7);
+		Square shape = new Square();
+		shape.setLength(5);
+		shape.setWidth(6);
 		String type = String.valueOf(shape.getShapeType());
 			
 		ShapeService s = new ShapeService();
