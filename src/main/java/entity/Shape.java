@@ -6,7 +6,7 @@ public abstract class Shape {
 	private int width;
 	private int area;
 	
-	private ShapeType shapeType;
+	
 	
 	public abstract ShapeType getShapeType();
 	

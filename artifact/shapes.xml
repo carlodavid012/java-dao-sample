@@ -20,6 +20,10 @@
 	
 	<bean id = "shape" class="entity.Shape" />
 	
-	<bean id = "shapeService" class="services.ShapeService" />
+	<bean name = "shapeDao" class="dao.ShapeDB"/>
+	
+	<bean id = "shapeService" class="services.ShapeService">
+	     <property name="shapeDAO" ref="shapeDao"/>
+	</bean>
 
 </beans>
