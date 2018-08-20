@@ -1,25 +1,21 @@
 package group.artifact;
 
 
-import java.sql.SQLException;
 import org.junit.Test;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.FileSystemResource;
 
 
 
-import entity.Triangle;
-import services.ShapeService;
-
+@Deprecated
 public class ShapeTest {
 
 	@Test
-	public void test() throws SQLException {
+	public void test() {
+		
+		System.out.println("test start");
+		
 		/**
 		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("shapes.xml"));
-		*/
+		
 		
 		BeanFactory beanFactory = new ClassPathXmlApplicationContext(new String[] {
 				"shapes.xml"
@@ -28,12 +24,15 @@ public class ShapeTest {
 		Triangle triangle = (Triangle)beanFactory.getBean("triangle");
 		triangle.setLength(2);
 		triangle.setWidth(10);
-		String type = String.valueOf(triangle.getShapeType());
+		String type = String.valueOf(triangle.getShapeTypimport org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringRunner;e());
 			
 		
 		ShapeService s = (ShapeService)beanFactory.getBean("shapeService");
 		s.computeArea(type, triangle.getLength(), triangle.getWidth());
-		
+		*/
 	}
 	
 //	@Test
