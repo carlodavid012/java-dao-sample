@@ -19,6 +19,8 @@ public class Triangle extends Shape{
 	@Enumerated(EnumType.STRING)
 	private ShapeType shapeType;
 	
+	public Triangle() {}
+	
 	public Triangle(ShapeType shapeType) {
 		this.shapeType = shapeType;
 	}
@@ -29,6 +31,7 @@ public class Triangle extends Shape{
 		return this.shapeType;
 	}
 
+	
 	@Override
 	public void setShapeType(ShapeType shapeType) {
 		this.shapeType = shapeType;

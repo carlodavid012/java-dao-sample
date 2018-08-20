@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Table;
+import com.ayannah.carlo.entity.*;
 
 @Entity
 @Table(name="shapes")
@@ -25,11 +26,13 @@ public class Rectangle extends Shape{
 		this.shapeType = shapeType;
 	}
 	
+	@Override
 	public ShapeType getShapeType() {
 		
 		return this.shapeType;
 	}
 
+	@Override
 	public void setShapeType(ShapeType shapeType) {
 		this.shapeType = shapeType;
 		
