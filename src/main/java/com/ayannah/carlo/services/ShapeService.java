@@ -1,6 +1,6 @@
 package com.ayannah.carlo.services;
 
-import java.sql.SQLException;
+import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -11,6 +11,9 @@ import com.ayannah.carlo.entity.MyShape;
 import com.ayannah.carlo.entity.Shape;
 import com.ayannah.carlo.repository.ShapeDAO;
 
+
+
+
 @Service
 @Transactional
 public class ShapeService implements MyShape {
@@ -19,7 +22,7 @@ public class ShapeService implements MyShape {
 	@Autowired
 	private ShapeDAO shapeDAO;
 	
-
+	
     /*
      * (non-Javadoc)
      * @see com.ayannah.carlo.entity.MyShape#computeArea(java.lang.String, int, int)
@@ -29,10 +32,6 @@ public class ShapeService implements MyShape {
 		
 		return shapeDAO.save(shape);
 	}
-
-
-
-	
 	
 	
 }

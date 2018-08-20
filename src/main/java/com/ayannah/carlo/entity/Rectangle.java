@@ -22,6 +22,8 @@ public class Rectangle extends Shape{
 	@Enumerated(EnumType.STRING)
 	private ShapeType shapeType;
 	
+	public Rectangle() {}
+	
 	public Rectangle(ShapeType shapeType) {
 		this.shapeType = shapeType;
 	}

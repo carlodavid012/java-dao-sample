@@ -19,6 +19,7 @@ public class Square extends Shape{
 	@Enumerated(EnumType.STRING)
 	private ShapeType shapeType;
 	
+	public Square() {}
 	
 	public Square (ShapeType shapeType) {
 		this.shapeType = shapeType;

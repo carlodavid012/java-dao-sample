@@ -1,9 +1,6 @@
 package group.artifact;
 
-
 import org.junit.Test;
-
-
 
 @Deprecated
 public class ShapeTest {

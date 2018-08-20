@@ -1,9 +1,5 @@
 package com.ayannah.carlo;
 
-
-
-
-
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -29,8 +25,8 @@ public class ShapeAppTest {
 		System.out.println("test app");
 		
 		Triangle triangle = new Triangle(ShapeType.TRIANGLE);
-		triangle.setLength(2);
-		triangle.setWidth(10);
+		triangle.setLength(3);
+		triangle.setWidth(3);
 		
 			
 		Shape shape = shapeService.computeArea(triangle);
