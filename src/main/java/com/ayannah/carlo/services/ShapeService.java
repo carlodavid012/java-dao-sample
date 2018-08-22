@@ -1,7 +1,5 @@
 package com.ayannah.carlo.services;
 
-import java.util.List;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.ayannah.carlo.entity.MyShape;
 import com.ayannah.carlo.entity.Shape;
 import com.ayannah.carlo.repository.ShapeDAO;
-
 
 
 
@@ -32,6 +29,5 @@ public class ShapeService implements MyShape {
 		
 		return shapeDAO.save(shape);
 	}
-	
-	
+
 }

@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.ayannah.carlo.entity.Rectangle;
 import com.ayannah.carlo.entity.Shape;
 import com.ayannah.carlo.entity.ShapeType;
+import com.ayannah.carlo.entity.Square;
 import com.ayannah.carlo.entity.Triangle;
 import com.ayannah.carlo.services.ShapeService;
 
@@ -24,13 +26,13 @@ public class ShapeAppTest {
 	public void test() {
 		System.out.println("test app");
 		
-		Triangle triangle = new Triangle(ShapeType.TRIANGLE);
-		triangle.setLength(3);
-		triangle.setWidth(3);
+		Square square = new Square(ShapeType.SQUARE);
+		square.setLength(5);
+		square.setWidth(4);
 		
 			
-		Shape shape = shapeService.computeArea(triangle);
-		assertTrue(shape instanceof Triangle);
+		Shape shape = shapeService.computeArea(square);
+		assertTrue(shape instanceof Square);
 		
 		
 		
